@@ -1,8 +1,204 @@
+---
+version: alpha
+name: Enterprise AI System
+description: A controlled enterprise AI interface built from stark white editorial space, deep green-black product bands, soft mineral surfaces, rounded media cards, and a Google Fonts type system with distinct display, UI, and technical label roles.
+
+colors:
+  primary: "#17171c"
+  black: "#000000"
+  ink: "#212121"
+  deep-green: "#003c33"
+  dark-navy: "#071829"
+  canvas: "#ffffff"
+  soft-stone: "#eeece7"
+  pale-green: "#edfce9"
+  pale-blue: "#f1f5ff"
+  hairline: "#d9d9dd"
+  border-light: "#e5e7eb"
+  card-border: "#f2f2f2"
+  muted: "#93939f"
+  slate: "#75758a"
+  body-muted: "#616161"
+  action-blue: "#1863dc"
+  focus-blue: "#4c6ee6"
+  coral: "#ff7759"
+  coral-soft: "#ffad9b"
+  form-focus: "#9b60aa"
+  on-primary: "#ffffff"
+  on-dark: "#ffffff"
+  error: "#b30000"
+
+typography:
+  hero-display:
+    fontFamily: "Space Grotesk"
+    fontSize: 96px
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: -1.92px
+  product-display:
+    fontFamily: "Space Grotesk"
+    fontSize: 72px
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: -1.44px
+  section-display:
+    fontFamily: "Inter"
+    fontSize: 60px
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: -1.2px
+  section-heading:
+    fontFamily: "Inter"
+    fontSize: 48px
+    fontWeight: 400
+    lineHeight: 1.2
+    letterSpacing: -0.48px
+  card-heading:
+    fontFamily: "Inter"
+    fontSize: 32px
+    fontWeight: 400
+    lineHeight: 1.2
+    letterSpacing: -0.32px
+  feature-heading:
+    fontFamily: "Inter"
+    fontSize: 24px
+    fontWeight: 400
+    lineHeight: 1.3
+    letterSpacing: 0
+  body-large:
+    fontFamily: "Inter"
+    fontSize: 18px
+    fontWeight: 400
+    lineHeight: 1.4
+    letterSpacing: 0
+  body:
+    fontFamily: "Inter"
+    fontSize: 16px
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: 0
+  button:
+    fontFamily: "Inter"
+    fontSize: 14px
+    fontWeight: 500
+    lineHeight: 1.71
+    letterSpacing: 0
+  caption:
+    fontFamily: "Inter"
+    fontSize: 14px
+    fontWeight: 400
+    lineHeight: 1.4
+    letterSpacing: 0
+  label:
+    fontFamily: "Share Tech"
+    fontSize: 14px
+    fontWeight: 400
+    lineHeight: 1.4
+    letterSpacing: 0.28px
+  micro:
+    fontFamily: "Inter"
+    fontSize: 12px
+    fontWeight: 400
+    lineHeight: 1.4
+    letterSpacing: 0
+
+rounded:
+  xs: 4px
+  sm: 8px
+  md: 16px
+  lg: 22px
+  xl: 30px
+  pill: 32px
+  full: 9999px
+
+spacing:
+  xxs: 2px
+  xs: 6px
+  sm: 8px
+  md: 12px
+  lg: 16px
+  xl: 24px
+  xxl: 32px
+  section: 80px
+
+components:
+  button-primary:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.button}"
+    rounded: "{rounded.pill}"
+    padding: 12px 24px
+  button-secondary:
+    backgroundColor: transparent
+    textColor: "{colors.ink}"
+    typography: "{typography.body}"
+    rounded: "{rounded.xs}"
+    padding: 8px 0
+  button-pill-outline:
+    backgroundColor: transparent
+    textColor: "{colors.primary}"
+    typography: "{typography.button}"
+    rounded: "{rounded.xl}"
+    padding: 6px 12px
+  announcement-bar:
+    backgroundColor: "{colors.black}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.micro}"
+    height: 36px
+  hero-photo-card:
+    backgroundColor: "{colors.canvas}"
+    rounded: "{rounded.lg}"
+  agent-console-card:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-dark}"
+    rounded: "{rounded.sm}"
+    padding: 24px
+  trust-logo-strip:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.caption}"
+  capability-card:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body}"
+    rounded: "{rounded.xs}"
+    padding: 24px
+  dark-feature-band:
+    backgroundColor: "{colors.deep-green}"
+    textColor: "{colors.on-dark}"
+    rounded: "{rounded.lg}"
+    padding: 80px
+  product-card:
+    backgroundColor: "{colors.soft-stone}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.sm}"
+    padding: 32px
+  blog-filter-chip:
+    backgroundColor: transparent
+    textColor: "{colors.coral}"
+    typography: "{typography.card-heading}"
+    rounded: "{rounded.sm}"
+    padding: 8px 14px
+  research-table:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-large}"
+  contact-form-card:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.lg}"
+    padding: 32px
+  footer-newsletter:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.micro}"
+---
+
 ## Overview
 
-Cohere's current web presence feels like a sober enterprise AI command center with editorial restraint. The home page opens on a huge typographic declaration over a white canvas, then uses photography, dark product mockups, trust logos, and generous empty space to make AI infrastructure feel controlled rather than speculative. Product pages invert the tone into deep green-black or dark navy bands, while blog and research pages move toward publishing-system clarity: large filters, thin rules, dense lists, and pale technical backgrounds.
+This design system defines a sober enterprise AI interface with editorial restraint. The home page opens on a huge typographic declaration over a white canvas, then uses photography, dark product mockups, trust logos, and generous empty space to make AI infrastructure feel controlled rather than speculative. Product pages can invert the tone into deep green-black or dark navy bands, while blog and research pages move toward publishing-system clarity: large filters, thin rules, dense lists, and pale technical backgrounds.
 
-What makes the system distinctive is the mix of austere black-and-white UI with bursts of tactile brand imagery. The site avoids decorative chrome in the normal interface; color arrives through photography, abstract 3D media, coral blog taxonomy chips, blue research links, and dark product environments. Cards are rounded but not cute. Type is large, tight, and almost monospaced in spirit, creating a research-lab cadence across marketing, product, and editorial surfaces.
+What makes the system distinctive is the mix of austere black-and-white UI with bursts of tactile brand imagery. The site avoids decorative chrome in the normal interface; color arrives through photography, abstract 3D media, coral blog taxonomy chips, blue research links, and dark product environments. Cards are rounded but not cute. Type is large, tight, and technically precise, creating a research-lab cadence across marketing, product, and editorial surfaces.
 
 **Key Characteristics:**
 
@@ -18,9 +214,9 @@ What makes the system distinctive is the mix of austere black-and-white UI with 
 
 ### Brand & Accent
 
-- **Cohere Black** (`#000000`): Announcement bar, highest-contrast text, and the global brand anchor.
+- **Black** (`#000000`): Announcement bar, highest-contrast text, and the global brand anchor.
 - **Near-Black Primary** (`#17171c`): Primary CTA buttons, dark footer, and deep UI cards.
-- **Deep Enterprise Green** (`#003c33`): Product hero bands for North and Command-style dark sections.
+- **Deep Enterprise Green** (`#003c33`): Product hero bands and dark enterprise sections.
 - **Dark Navy** (`#071829`): Financial-services and security-oriented solution bands.
 - **Action Blue** (`#1863dc`): Editorial links, pagination, and secondary action emphasis.
 - **Coral** (`#ff7759`): Blog category chips, taxonomy outlines, and warm product markers.
@@ -30,7 +226,7 @@ What makes the system distinctive is the mix of austere black-and-white UI with 
 
 - **Canvas White** (`#ffffff`): Dominant page background and form/card surface.
 - **Soft Stone** (`#eeece7`): Product cards, testimonial placeholders, and warm neutral surface blocks.
-- **Pale Green Wash** (`#edfce9`): North page section backdrop behind stacked dark capability panels.
+- **Pale Green Wash** (`#edfce9`): Pale section backdrop behind stacked dark capability panels.
 - **Pale Blue Wash** (`#f1f5ff`): Blog CTA surface behind abstract 3D imagery.
 - **Card Border** (`#f2f2f2`): Softest card containment line.
 
@@ -50,40 +246,40 @@ What makes the system distinctive is the mix of austere black-and-white UI with 
 
 ### Gradient System
 
-Cohere does not use gradients as a generic UI fill. Gradients and color fields are media-led: abstract 3D hero imagery, deep blue open-science particle fields, red-orange product video posters, and dark green-to-black product environments. Keep UI surfaces flat; reserve gradient richness for large media panels and CTA image bands.
+Do not use gradients as a generic UI fill. Gradients and color fields should be media-led: abstract 3D hero imagery, deep blue open-science particle fields, red-orange product video posters, and dark green-to-black product environments. Keep UI surfaces flat; reserve gradient richness for large media panels and CTA image bands.
 
 ## Typography
 
 ### Font Family
 
-- **Display**: `CohereText`, falling back to `Space Grotesk`, `Inter`, `ui-sans-serif`, and `system-ui`.
-- **Body/UI**: `Unica77 Cohere Web`, falling back to `Inter`, `Arial`, `ui-sans-serif`, and `system-ui`.
-- **Technical labels**: `CohereMono`, falling back to `Arial`, `ui-sans-serif`, and `system-ui`.
-- **Icons**: Cohere uses custom icon fonts and thin-line geometric illustrations.
+- **Display**: `Space Grotesk`.
+- **Body/UI**: `Inter`.
+- **Technical labels**: `Share Tech`.
+- **Icons**: Use thin-line geometric illustrations and a consistent icon set.
 
 ### Hierarchy
 
-| Role            | Font       | Size | Weight | Line Height | Letter Spacing | Notes                                   |
-| --------------- | ---------- | ---: | -----: | ----------: | -------------: | --------------------------------------- |
-| Hero Display    | CohereText | 96px |    400 |        1.00 |        -1.92px | Home page declaration scale.            |
-| Product Display | CohereText | 72px |    400 |        1.00 |        -1.44px | Product and research hero headlines.    |
-| Section Display | Unica77    | 60px |    400 |        1.00 |         -1.2px | Large product-page headings.            |
-| Section Heading | Unica77    | 48px |    400 |        1.20 |        -0.48px | Split hero and CTA headings.            |
-| Card Heading    | Unica77    | 32px |    400 |        1.20 |        -0.32px | Feature card and list section titles.   |
-| Feature Heading | Unica77    | 24px |    400 |        1.30 |              0 | Cards, filters, and article titles.     |
-| Body Large      | Unica77    | 18px |    400 |        1.40 |              0 | Lead text and larger paragraphs.        |
-| Body            | Unica77    | 16px |    400 |        1.50 |              0 | Default copy and link text.             |
-| Button          | Unica77    | 14px |    500 |        1.71 |              0 | Compact CTA labels.                     |
-| Caption         | Unica77    | 14px |    400 |        1.40 |              0 | Metadata and small explanatory text.    |
-| Mono Label      | CohereMono | 14px |    400 |        1.40 |         0.28px | Uppercase technical labels.             |
-| Micro           | Unica77    | 12px |    400 |        1.40 |              0 | Footer, nav microcopy, and small links. |
+| Role            | Font           | Size | Weight | Line Height | Letter Spacing | Notes                                   |
+| --------------- | -------------- | ---: | -----: | ----------: | -------------: | --------------------------------------- |
+| Hero Display    | Space Grotesk | 96px |    400 |        1.00 |        -1.92px | Home page declaration scale.            |
+| Product Display | Space Grotesk | 72px |    400 |        1.00 |        -1.44px | Product and research hero headlines.    |
+| Section Display | Inter         | 60px |    400 |        1.00 |         -1.2px | Large product-page headings.            |
+| Section Heading | Inter         | 48px |    400 |        1.20 |        -0.48px | Split hero and CTA headings.            |
+| Card Heading    | Inter         | 32px |    400 |        1.20 |        -0.32px | Feature card and list section titles.   |
+| Feature Heading | Inter         | 24px |    400 |        1.30 |              0 | Cards, filters, and article titles.     |
+| Body Large      | Inter         | 18px |    400 |        1.40 |              0 | Lead text and larger paragraphs.        |
+| Body            | Inter         | 16px |    400 |        1.50 |              0 | Default copy and link text.             |
+| Button          | Inter         | 14px |    500 |        1.71 |              0 | Compact CTA labels.                     |
+| Caption         | Inter         | 14px |    400 |        1.40 |              0 | Metadata and small explanatory text.    |
+| Label           | Share Tech    | 14px |    400 |        1.40 |         0.28px | Uppercase technical labels.             |
+| Micro           | Inter         | 12px |    400 |        1.40 |              0 | Footer, nav microcopy, and small links. |
 
 ### Principles
 
-- Use massive type sparingly; Cohere pages often have one oversized headline and then settle into restrained 16px-24px UI copy.
+- Use massive type sparingly; pages should usually have one oversized headline and then settle into restrained 16px-24px UI copy.
 - Keep display type tight. Hero copy should feel compact and carved, not airy.
 - Avoid heavy bold weights. Size, spacing, and surface contrast do most of the hierarchy work.
-- Use uppercase mono labels for category and system markers, especially on product and research pages.
+- Use Share Tech uppercase labels for category and system markers, especially on product and research pages.
 - Editorial pages can use coral chips and blue links, but the base typography remains black and measured.
 
 ## Layout
@@ -105,18 +301,18 @@ Large sections rely on dramatic vertical breathing room. The home page places a 
 
 ### Whitespace Philosophy
 
-Cohere uses whitespace as a trust signal. Large empty intervals separate the brand claim, customer proof, product proof, and CTA. Dense content appears only where it serves the information architecture: research paper rows, blog card grids, and contact form fields.
+Use whitespace as a trust signal. Large empty intervals separate the brand claim, customer proof, product proof, and CTA. Dense content appears only where it serves the information architecture: research paper rows, blog card grids, and contact form fields.
 
 ## Elevation & Depth
 
-Cohere is mostly flat. Depth comes from surface alternation, media contrast, rounded corners, and thin borders rather than drop shadows.
+The system is mostly flat. Depth comes from surface alternation, media contrast, rounded corners, and thin borders rather than drop shadows.
 
-| Level              | Treatment                                             | Use                                                   |
-| ------------------ | ----------------------------------------------------- | ----------------------------------------------------- |
-| Flat               | No shadow, white or dark field                        | Hero copy, research lists, editorial surfaces         |
-| Bordered           | 1px `#d9d9dd`, `#e5e7eb`, or dark translucent rules   | Research rows, forms, pale cards, footer inputs       |
-| Media Lift         | Rounded image or video over contrasting section color | Hero photo cards, product videos, CTA imagery         |
-| Dark Product Field | Deep green or navy full-width band                    | Command, North, financial services, security sections |
+| Level              | Treatment                                             | Use                                                |
+| ------------------ | ----------------------------------------------------- | -------------------------------------------------- |
+| Flat               | No shadow, white or dark field                        | Hero copy, research lists, editorial surfaces      |
+| Bordered           | 1px `#d9d9dd`, `#e5e7eb`, or dark translucent rules   | Research rows, forms, pale cards, footer inputs    |
+| Media Lift         | Rounded image or video over contrasting section color | Hero photo cards, product videos, CTA imagery      |
+| Dark Product Field | Deep green or navy full-width band                    | Product, financial services, and security sections |
 
 ## Shapes
 
@@ -140,7 +336,7 @@ Images are not decorative backdrops for text except in CTA bands. Most imagery s
 
 ### **`button-primary`**
 
-Near-black or white pill CTA, depending on surface contrast. Uses 14px-16px Unica77, 12px 24px padding, and a 32px pill radius. This is the primary action style for "Request a demo", "Submit", and hero CTAs.
+Near-black or white pill CTA, depending on surface contrast. Uses 14px-16px Inter text, 12px 24px padding, and a 32px pill radius. This is the primary action style for "Request a demo", "Submit", and hero CTAs.
 
 ### **`button-secondary`**
 
@@ -192,7 +388,7 @@ Rounded white form panel set against dark green or warm stone sections. Inputs a
 
 ### **`footer-newsletter`**
 
-Dark footer subscription block with coral "AI moves fast" label, white headline, muted legal microcopy, a single-line email field, and arrow submit marker. Footer columns use white section labels and muted links.
+Dark footer subscription block with a coral editorial label, white headline, muted legal microcopy, a single-line email field, and arrow submit marker. Footer columns use white section labels and muted links.
 
 ## Do's and Don'ts
 
@@ -210,9 +406,9 @@ Dark footer subscription block with coral "AI moves fast" label, white headline,
 
 - Do not turn coral or blue into broad decorative surface colors.
 - Do not add heavy drop shadows to cards.
-- Do not make every section card-based; Cohere often uses unframed rows, rules, and open space.
+- Do not make every section card-based; use unframed rows, rules, and open space where they better serve the content.
 - Do not use rounded cards below 8px for major media.
-- Do not replace the display/body type split with one generic sans-serif voice.
+- Do not introduce additional font families or fallback stacks; keep the system on Space Grotesk, Inter, and Share Tech.
 - Do not render undocumented interaction variants in documentation or previews.
 - Do not use saturated gradients as normal UI backgrounds; keep gradients media-led.
 
@@ -251,6 +447,6 @@ Primary CTAs and pills meet comfortable touch sizing through 12px-24px padding a
 
 ## Known Gaps
 
-- Exact proprietary font files are not bundled; use the documented fallbacks when implementing externally.
+- Use only `Space Grotesk`, `Inter`, and `Share Tech` from Google Fonts as documented font families.
 - Mobile screenshots were not regenerated in this public update, so mobile behavior is documented from the desktop system and existing responsive patterns.
 - Some live pages lazy-load content blocks late; blank testimonial placeholders are documented as placeholder skeleton surfaces rather than filled testimonial cards.
