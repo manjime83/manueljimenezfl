@@ -198,7 +198,7 @@ components:
 
 This design system defines a sober enterprise AI interface with editorial restraint. The home page opens on a huge typographic declaration over a white canvas, then uses photography, dark product mockups, trust logos, and generous empty space to make AI infrastructure feel controlled rather than speculative. Product pages can invert the tone into deep green-black or dark navy bands, while blog and research pages move toward publishing-system clarity: large filters, thin rules, dense lists, and pale technical backgrounds.
 
-What makes the system distinctive is the mix of austere black-and-white UI with bursts of tactile brand imagery. The site avoids decorative chrome in the normal interface; color arrives through photography, abstract 3D media, coral blog taxonomy chips, blue research links, and dark product environments. Cards are rounded but not cute. Type is large, tight, and technically precise, creating a research-lab cadence across marketing, product, and editorial surfaces.
+What makes the system distinctive is the mix of austere black-and-white UI with bursts of tactile brand imagery. The site avoids decorative chrome in the normal interface; color arrives through photography, abstract 3D media, coral blog taxonomy chips, blue research links, and dark product environments. Cards are rounded but not cute. Type is large, tight, and almost monospaced in spirit, creating a research-lab cadence across marketing, product, and editorial surfaces.
 
 **Key Characteristics:**
 
@@ -259,8 +259,8 @@ Do not use gradients as a generic UI fill. Gradients and color fields should be 
 
 ### Hierarchy
 
-| Role            | Font           | Size | Weight | Line Height | Letter Spacing | Notes                                   |
-| --------------- | -------------- | ---: | -----: | ----------: | -------------: | --------------------------------------- |
+| Role            | Font          | Size | Weight | Line Height | Letter Spacing | Notes                                   |
+| --------------- | ------------- | ---: | -----: | ----------: | -------------: | --------------------------------------- |
 | Hero Display    | Space Grotesk | 96px |    400 |        1.00 |        -1.92px | Home page declaration scale.            |
 | Product Display | Space Grotesk | 72px |    400 |        1.00 |        -1.44px | Product and research hero headlines.    |
 | Section Display | Inter         | 60px |    400 |        1.00 |         -1.2px | Large product-page headings.            |
