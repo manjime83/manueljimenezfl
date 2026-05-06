@@ -20,7 +20,7 @@ const labelFont = Share_Tech({
 
 export const metadata: Metadata = {
   title: "Manuel Jiménez | Realtor",
-  description: "Business card for Manuel Jiménez, Realtor at My Realty Group.",
+  description: "Tarjeta digital de Manuel Jiménez, Realtor en My Realty Group.",
 };
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable} ${labelFont.variable} h-full antialiased`}>
+    <html lang="es" className={`${displayFont.variable} ${bodyFont.variable} ${labelFont.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );
