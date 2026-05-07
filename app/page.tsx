@@ -6,7 +6,7 @@ const qrDisplay = "qr.manueljimenezfl.com";
 const websiteUrl = "https://manueljimenezfl.com";
 const phoneHref = "tel:+13853713775";
 const phoneDisplay = "+1 385-371-3775";
-const email = "manuel@manueljimenezfl.com";
+const email = "realtor@manueljimenezfl.com";
 const handle = "@manueljimenezfl";
 const licenseNumber = "SL3658224";
 
