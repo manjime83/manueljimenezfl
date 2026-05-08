@@ -19,8 +19,8 @@ const labelFont = Share_Tech({
 });
 
 export const metadata: Metadata = {
-  title: "Manuel Jiménez | Realtor",
-  description: "Tarjeta digital de Manuel Jiménez, Realtor en My Realty Group.",
+  title: "Manuel Jimenez FL",
+  description: "Indice para la tarjeta digital de Manuel Jimenez y la guia del sistema de diseno Enterprise AI System.",
 };
 
 export default function RootLayout({
