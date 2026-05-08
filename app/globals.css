@@ -8,9 +8,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-display: var(--font-space-grotesk);
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-share-tech);
+  --font-sans: var(--font-dm-sans);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-minimax-display: var(--font-outfit);
+  --font-minimax-sans: var(--font-dm-sans);
+  --font-minimax-mono: var(--font-jetbrains-mono);
 }
 
 body {
@@ -20,6 +22,6 @@ body {
 }
 
 ::selection {
-  background: #ffad9b;
-  color: #17171c;
+  background: #c8ff00;
+  color: #181e25;
 }

@@ -1,26 +1,25 @@
 import type { Metadata } from "next";
-import { Inter, Share_Tech, Space_Grotesk } from "next/font/google";
+import { DM_Sans, JetBrains_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 
-const displayFont = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const minimaxDisplayFont = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
 });
 
-const bodyFont = Inter({
-  variable: "--font-inter",
+const minimaxBodyFont = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
 });
 
-const labelFont = Share_Tech({
-  variable: "--font-share-tech",
+const minimaxMonoFont = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
-  weight: "400",
 });
 
 export const metadata: Metadata = {
-  title: "Manuel Jimenez FL",
-  description: "Indice para la tarjeta digital de Manuel Jimenez y la guia del sistema de diseno Enterprise AI System.",
+  title: "Manuel Jimenez FL | MiniMax",
+  description: "MiniMax edition and digital business card for Manuel Jimenez FL.",
 };
 
 export default function RootLayout({
@@ -29,7 +28,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${displayFont.variable} ${bodyFont.variable} ${labelFont.variable} h-full antialiased`}>
+    <html
+      lang="es"
+      className={`${minimaxDisplayFont.variable} ${minimaxBodyFont.variable} ${minimaxMonoFont.variable} h-full antialiased`}
+    >
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );

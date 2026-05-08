@@ -3,21 +3,26 @@ import Link from "next/link";
 
 const destinations = [
   {
-    title: "Business Card",
-    eyebrow: "Personal contact",
-    href: "/business-card",
+    title: "MiniMax Edition",
+    eyebrow: "Cinematic real estate page",
+    href: "/minimax",
+    description: "Black-canvas, neon-lime version of Manuel Jimenez FL using the MiniMax cinematic lab direction.",
+    action: "Open edition",
+  },
+  {
+    title: "MiniMax Card",
+    eyebrow: "Black-canvas contact card",
+    href: "/business-card-minimax",
     description:
-      "Digital two-sided card for Manuel Jimenez with QR, WhatsApp, email, website, social links, and license details.",
-    surface: "bg-[#003c33] text-white",
+      "Two-sided digital business card using the MiniMax cinematic lab style, QR code, WhatsApp, contact links, and license details.",
     action: "Open card",
   },
   {
     title: "Design System",
-    eyebrow: "Enterprise AI System",
+    eyebrow: "Tokens, components, examples",
     href: "/design-system",
     description:
-      "Living documentation for the alpha design language: colors, typography, component treatments, product patterns, forms, and footer.",
-    surface: "bg-[#eeece7] text-[#17171c]",
+      "Full reference for the MiniMax cinematic lab system — color roles, typography scale, spacing rhythm, components, do/don'ts, and four full composition examples.",
     action: "Open system",
   },
 ];
@@ -36,59 +41,85 @@ function ArrowIcon() {
   );
 }
 
-function DesignPreview() {
+function MiniMaxPreview() {
   return (
-    <div className="flex h-full min-h-[220px] flex-col justify-between rounded-[8px] border border-[#d9d9dd] bg-white p-5">
-      <div className="flex h-2 overflow-hidden rounded-full">
-        {["#17171c", "#003c33", "#071829", "#eeece7", "#edfce9", "#1863dc", "#ff7759"].map((color) => (
-          <span key={color} className="flex-1" style={{ backgroundColor: color }} />
+    <div className="relative flex h-full min-h-[260px] flex-col justify-between overflow-hidden border border-[#2a3038] bg-black p-5 text-white">
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:30px_30px]" />
+      <div className="font-minimax-mono relative flex items-center justify-between border-b border-[#2a3038] pb-3 text-xs text-white/52 uppercase">
+        <span>Live search</span>
+        <span className="text-[#c8ff00]">Active</span>
+      </div>
+      <div className="relative grid grid-cols-4 gap-2">
+        {Array.from({ length: 16 }).map((_, index) => (
+          <span
+            key={index}
+            className={`h-8 border border-[#2a3038] ${[1, 6, 12].includes(index) ? "bg-[#c8ff00]" : "bg-[#181e25]"}`}
+          />
         ))}
       </div>
-      <div>
-        <p className="font-mono text-sm tracking-[0.28px] text-[#75758a] uppercase">Tokens</p>
-        <p className="mt-3 text-3xl leading-tight text-[#17171c]">Enterprise AI System</p>
-      </div>
-      <div className="grid grid-cols-3 gap-3">
-        <span className="h-16 rounded-[8px] bg-[#17171c]" />
-        <span className="h-16 rounded-[8px] bg-[#003c33]" />
-        <span className="h-16 rounded-[8px] bg-[#eeece7]" />
+      <div className="relative">
+        <p className="font-minimax-display text-4xl leading-none font-semibold">Search with signal.</p>
+        <div className="mt-4 h-2 w-24 rounded-full bg-[#c8ff00]" />
       </div>
     </div>
   );
 }
 
-function CardPreview() {
+function MiniMaxCardPreview() {
   return (
-    <div className="relative h-full min-h-[220px] overflow-hidden rounded-[22px] border border-white/24 bg-[#003c33] p-5">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.16),rgba(0,60,51,0)_48%)]" />
-      <div className="relative flex h-full flex-col items-center justify-center gap-5 text-center text-white">
-        <Image
-          src="/magnific_crea-una-foto-professiona_2927400751.png"
-          alt="Preview portrait for Manuel Jimenez business card"
-          width={2048}
-          height={2048}
-          priority
-          className="size-28 rounded-[18px] border border-white/30 object-cover object-top ring-8 ring-white/10"
-        />
-        <div>
-          <p className="font-display text-3xl leading-none">Manuel Jimenez</p>
-          <p className="mt-2 font-mono text-sm text-white/65 uppercase">Real Estate Agent</p>
+    <div className="relative h-full min-h-[260px] overflow-hidden border border-[#2a3038] bg-black p-5 text-white">
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:30px_30px]" />
+      <div className="relative grid h-full grid-cols-[0.82fr_1fr] gap-4">
+        <div className="overflow-hidden border border-[#2a3038] bg-[#181e25]">
+          <Image
+            src="/magnific_crea-una-foto-professiona_2927400751.png"
+            alt="Preview portrait for MiniMax business card"
+            width={2048}
+            height={2048}
+            priority
+            className="h-full w-full object-cover object-top grayscale-[20%]"
+          />
+        </div>
+        <div className="flex min-w-0 flex-col justify-between">
+          <div>
+            <p className="font-minimax-mono text-xs text-white/52 uppercase">Card system</p>
+            <p className="font-minimax-display mt-3 text-4xl leading-none font-semibold">Manuel Jimenez</p>
+          </div>
+          <div className="grid grid-cols-3 gap-1.5">
+            {Array.from({ length: 12 }).map((_, index) => (
+              <span
+                key={index}
+                className={`h-5 border border-[#2a3038] ${
+                  [2, 6, 10].includes(index) ? "bg-[#c8ff00]" : "bg-[#181e25]"
+                }`}
+              />
+            ))}
+          </div>
+          <div className="h-9 rounded-full bg-[#c8ff00]" />
         </div>
       </div>
     </div>
   );
 }
 
+function PreviewFor({ href }: { href: string }) {
+  if (href === "/business-card-minimax") {
+    return <MiniMaxCardPreview />;
+  }
+
+  return <MiniMaxPreview />;
+}
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-[#212121]">
+    <main className="font-minimax-sans min-h-screen bg-black text-white">
       <section className="mx-auto flex min-h-screen w-full max-w-7xl flex-col justify-center px-5 py-12 md:px-8">
         <div className="max-w-3xl">
-          <p className="font-mono text-sm tracking-[0.28px] text-[#75758a] uppercase">manueljimenezfl.com</p>
-          <h1 className="font-display mt-5 text-6xl leading-none text-[#17171c] md:text-8xl">Site Index</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-[1.4] text-[#616161]">
-            Choose the public business card or the internal design system guide. Both pages stay separate so each one
-            can evolve without crowding the other.
+          <p className="font-minimax-mono text-sm tracking-[0.04em] text-[#7a808a] uppercase">manueljimenezfl.com</p>
+          <h1 className="font-minimax-display mt-5 text-6xl leading-none font-semibold md:text-8xl">MiniMax</h1>
+          <p className="mt-6 max-w-2xl text-lg leading-[1.55] text-[#c5c9cf]">
+            Cinematic black-canvas pages for Manuel Jimenez FL. Only the MiniMax edition and MiniMax business card
+            remain in this build.
           </p>
         </div>
 
@@ -97,18 +128,16 @@ export default function Home() {
             <Link
               key={item.href}
               href={item.href}
-              className="group grid gap-5 rounded-[8px] border border-[#d9d9dd] bg-white p-5 transition-colors hover:border-[#17171c] focus:ring-2 focus:ring-[#4c6ee6] focus:outline-none md:grid-cols-[0.9fr_1.1fr]"
+              className="group grid gap-5 border border-[#2a3038] bg-[#0a0a0a] p-5 transition-colors hover:border-[#c8ff00] focus:ring-2 focus:ring-[#c8ff00] focus:outline-none"
             >
-              <div className={item.href === "/business-card" ? "" : "order-1 md:order-none"}>
-                {item.href === "/business-card" ? <CardPreview /> : <DesignPreview />}
-              </div>
-              <div className={`flex min-h-[220px] flex-col justify-between rounded-[8px] p-6 ${item.surface}`}>
+              <PreviewFor href={item.href} />
+              <div className="flex min-h-[220px] flex-col justify-between border border-[#2a3038] bg-[#181e25] p-6">
                 <div>
-                  <p className="font-mono text-sm tracking-[0.28px] uppercase opacity-65">{item.eyebrow}</p>
-                  <h2 className="mt-4 text-4xl leading-tight">{item.title}</h2>
-                  <p className="mt-5 text-base leading-[1.5] opacity-72">{item.description}</p>
+                  <p className="font-minimax-mono text-sm tracking-[0.04em] text-[#7a808a] uppercase">{item.eyebrow}</p>
+                  <h2 className="font-minimax-display mt-4 text-4xl leading-tight font-semibold">{item.title}</h2>
+                  <p className="mt-5 text-base leading-[1.5] text-[#c5c9cf]">{item.description}</p>
                 </div>
-                <span className="mt-8 inline-flex items-center gap-2 text-sm leading-[1.71] font-medium">
+                <span className="mt-8 inline-flex items-center gap-2 text-sm leading-[1.71] font-semibold text-[#c8ff00]">
                   {item.action}
                   <span className="transition-transform group-hover:translate-x-1">
                     <ArrowIcon />
