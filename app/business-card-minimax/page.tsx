@@ -9,18 +9,22 @@ export const metadata: Metadata = {
   description: "Black-canvas digital business card for Manuel Jimenez FL.",
 };
 
+const phoneNumber = "+1 (407) 301-0492";
+const phoneDigits = phoneNumber.replace(/\D/g, "");
+const socialHandle = "manueljimenezfl";
+
 const contact = {
-  whatsappUrl: "https://wa.me/14076309767",
+  whatsappUrl: `https://wa.me/${phoneDigits}`,
   qrUrl: "https://www.manueljimenezfl.com",
   websiteUrl: "https://manueljimenezfl.com",
-  phoneHref: "tel:+14076309767",
-  phoneDisplay: "+1 (407) 630-9767",
+  phoneHref: `tel:+${phoneDigits}`,
+  phoneDisplay: phoneNumber,
   email: "manuel@manueljimenezfl.com",
-  handle: "@manueljimenezfl",
+  handle: `@${socialHandle}`,
   licenseNumber: "SL3658224",
-  facebookUrl: "https://www.facebook.com/manueljimenezfl",
-  youtubeUrl: "https://www.youtube.com/@manueljimenezfl",
-  instagramUrl: "https://www.instagram.com/manueljimenezfl",
+  facebookUrl: `https://www.facebook.com/${socialHandle}`,
+  youtubeUrl: `https://www.youtube.com/@${socialHandle}`,
+  instagramUrl: `https://www.instagram.com/${socialHandle}`,
 };
 
 const channels = [
