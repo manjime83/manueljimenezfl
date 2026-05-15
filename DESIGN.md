@@ -95,6 +95,12 @@ Flat surfaces with hard borders. Depth comes from:
 
 Modals get `0 24px 64px rgba(0, 0, 0, 0.72)` over a 70% black scrim. No drop shadows on cards or buttons. Reserve subtle glow effects for hovered demo tiles only.
 
+**Background texture — dot field.** Full-bleed dark canvases (banners, scrims, masthead chrome) get a single dot-pattern layer that reads as faint telemetry noise, never as decoration:
+
+- White dots, 1.5–1.6px radius on a 30–36px cell at 16–18% opacity (`rgba(255,255,255,0.16–0.18)`). Tighter cells (30–32px) on Instagram / Facebook, looser cells (36px) on wider canvases (YouTube 2560).
+- **Stack order:** `--bg` solid fill → dot pattern → content. Never apply the texture to text, buttons, or demo media.
+- **No grid layer.** Hairline grids belong in spec tables and inverse paper frames, not as a backdrop behind the dots — the dot field carries the atmosphere alone.
+
 ## 7. Do's and Don'ts
 
 **Do**

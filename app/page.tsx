@@ -25,6 +25,14 @@ const destinations = [
       "Full reference for the MiniMax cinematic lab system — color roles, typography scale, spacing rhythm, components, do/don'ts, and four full composition examples.",
     action: "Open system",
   },
+  {
+    title: "Socials Banners",
+    eyebrow: "YouTube · Facebook · Instagram",
+    href: "/socials",
+    description:
+      "MiniMax-style banner art for the three socials, previewed inline and exported as PNG via sharp from the same SVG source.",
+    action: "Open banners",
+  },
 ];
 
 function ArrowIcon() {
