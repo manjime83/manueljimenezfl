@@ -1,0 +1,5 @@
+- PRESENTATION - AS an agent
+- NEWPO interview
+- PEQUAILfication
+- PROCESS
+- TEAM

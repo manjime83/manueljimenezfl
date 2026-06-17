@@ -33,6 +33,14 @@ const destinations = [
       "MiniMax-style banner art for the three socials, previewed inline and exported as PNG via sharp from the same SVG source.",
     action: "Open banners",
   },
+  {
+    title: "Carousels",
+    eyebrow: "Instagram · 1:1 sequences",
+    href: "/carousels",
+    description:
+      "Square 1080×1080 carousels — cover, body and CTA slides in the MiniMax style. Download single PNGs or the full sequence as a ZIP, plus the replication prompt for new carousels.",
+    action: "Open carousels",
+  },
 ];
 
 function ArrowIcon() {
