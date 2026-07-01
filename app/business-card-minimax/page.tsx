@@ -182,7 +182,7 @@ function FrontCard() {
         <div className="pointer-events-none absolute inset-x-0 -bottom-px h-3/5 bg-linear-to-b from-transparent via-black/70 to-black" />
       </div>
 
-      <div className="relative -mt-62 flex min-h-0 flex-1 flex-col px-7 pt-2 pb-8">
+      <div className="relative -mt-62 flex min-h-0 flex-1 flex-col px-7 pt-2 pb-12">
         <Image
           src="/logo-transparent.png"
           alt=""
@@ -220,7 +220,7 @@ function FrontCard() {
 function BackCard() {
   return (
     <CardShell id="card-back" label="Business card back" tone="light">
-      <div className="flex min-h-0 flex-1 flex-col px-7 pt-12 pb-8">
+      <div className="flex min-h-0 flex-1 flex-col px-7 pt-12 pb-12">
         <Image
           src="/logo-transparent.png"
           alt=""
