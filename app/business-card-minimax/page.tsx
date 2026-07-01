@@ -258,7 +258,7 @@ function BackCard() {
           aria-label="Contact me on WhatsApp"
           className="group mt-auto flex items-center gap-3 rounded-full bg-[#c8ff00] px-5 py-3 text-[#181e25] transition-colors hover:bg-[#d8ff3a] focus:ring-2 focus:ring-[#9bcc00] focus:outline-none"
         >
-          <WhatsAppGlyph className="size-8" />
+          <WhatsAppGlyph className="size-7" />
           <span className="flex flex-col items-start leading-[1.2]">
             <span className="text-[16px] font-semibold">Contact me</span>
             <span className="font-minimax-mono text-[13px] font-medium tracking-[0.04em] tabular-nums opacity-75">
@@ -278,10 +278,10 @@ function BackCard() {
           className="group mt-3 flex items-center gap-3 rounded-xl bg-[#181e25] px-4 py-3 text-white transition-colors hover:bg-[#232a33] focus:ring-2 focus:ring-[#9bcc00] focus:outline-none"
         >
           <span className="flex items-center gap-2.5">
-            <InstagramGlyph className="size-8" />
-            <FacebookGlyph className="size-4.5" />
-            <YouTubeGlyph className="size-4.5" />
-            <TikTokGlyph className="size-4.5" />
+            <InstagramGlyph className="size-7" />
+            <FacebookGlyph className="size-7" />
+            <YouTubeGlyph className="size-7" />
+            <TikTokGlyph className="size-7" />
           </span>
           <span className="ml-2 flex flex-col items-start leading-[1.2]">
             <span className="text-[16px] font-semibold">Follow me</span>
