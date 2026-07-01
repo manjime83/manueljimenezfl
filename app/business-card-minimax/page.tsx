@@ -172,12 +172,11 @@ function FrontCard() {
     <CardShell id="card-front" label="Business card front" tone="dark">
       <div className="relative aspect-4/5 w-full overflow-hidden">
         <Image
-          src="/magnific_cambiemos-el-fondo-por-un_XtWtCpZBfo.jpeg"
+          src="/magnific_cambiemos-el-fondo-por-un_mCDQnr8hJQ.jpeg"
           alt="Portrait of Manuel Jiménez"
-          width={1024}
-          height={1024}
+          fill
           priority
-          className="h-full w-full origin-center object-cover transform-[translate(7%,35%)_scale(1.80)] grayscale-12"
+          className="h-full w-full origin-top object-cover object-top transform-[translate(0%,-18%)_scale(1.5)] grayscale-15"
         />
         <div className="pointer-events-none absolute inset-x-0 -bottom-px h-3/5 bg-linear-to-b from-transparent via-black/70 to-black" />
       </div>
