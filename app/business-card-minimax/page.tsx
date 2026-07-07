@@ -106,6 +106,50 @@ function InstagramGlyph({ className = "size-4" }: { className?: string }) {
   );
 }
 
+function PhoneGlyph({ className = "size-4" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
+      <path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.28-.28.68-.36 1.02-.24 1.12.4 2.32.6 3.58.6.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.4 21 3 13.6 3 4.5c0-.55.45-1 1-1H7.4c.55 0 1 .45 1 1 0 1.26.2 2.46.6 3.58.12.34.04.74-.24 1.02L6.6 10.8Z" />
+    </svg>
+  );
+}
+
+function MailGlyph({ className = "size-4" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="3" y="5" width="18" height="14" rx="2.5" />
+      <path d="m3.8 7.2 8.2 5.8 8.2-5.8" />
+    </svg>
+  );
+}
+
+function GlobeGlyph({ className = "size-4" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3c2.6 2.5 4 5.7 4 9s-1.4 6.5-4 9c-2.6-2.5-4-5.7-4-9s1.4-6.5 4-9Z" />
+    </svg>
+  );
+}
+
 function CardShell({
   children,
   label,
@@ -143,24 +187,30 @@ function ContactRow({
   label,
   value,
   href,
+  icon,
   isFirst = false,
 }: {
   label: string;
   value: string;
   href: string;
+  icon: ReactNode;
   isFirst?: boolean;
 }) {
   return (
     <a
       href={href}
-      className={`grid grid-cols-[80px_1fr] items-baseline gap-3 px-5 py-4.5 transition-colors hover:text-[#c8ff00] focus:ring-2 focus:ring-[#c8ff00] focus:outline-none ${
+      aria-label={`${label}: ${value}`}
+      className={`flex items-center gap-3.5 px-4 py-3 transition-colors hover:text-[#c8ff00] focus:ring-2 focus:ring-[#c8ff00] focus:outline-none ${
         isFirst ? "" : "border-t border-[#2a3038]"
       }`}
     >
-      <span className="font-minimax-mono text-[13px] leading-[1.4] font-medium tracking-[0.12em] text-[#7a808a] uppercase">
-        {label}
+      <span
+        aria-hidden="true"
+        className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#181e25] text-[#c8ff00]"
+      >
+        {icon}
       </span>
-      <span className="min-w-0 text-right text-[clamp(14px,3.9cqw,17px)] leading-[1.4] font-medium whitespace-nowrap text-[#c5c9cf]">
+      <span className="min-w-0 flex-1 text-[18px] leading-[1.35] font-bold whitespace-nowrap text-[#eceef1]">
         {value}
       </span>
     </a>
@@ -176,12 +226,12 @@ function FrontCard() {
           alt="Portrait of Manuel Jiménez"
           fill
           priority
-          className="h-full w-full origin-top object-cover object-top transform-[translate(0%,-18%)_scale(1.5)] grayscale-15"
+          className="h-full w-full origin-top transform-[translate(0%,-18%)_scale(1.5)] object-cover object-top grayscale-10"
         />
         <div className="pointer-events-none absolute inset-x-0 -bottom-px h-3/5 bg-linear-to-b from-transparent via-black/70 to-black" />
       </div>
 
-      <div className="relative -mt-62 flex min-h-0 flex-1 flex-col px-7 pt-2 pb-12">
+      <div className="relative -mt-62 flex min-h-0 flex-1 flex-col pt-2 pb-12">
         <Image
           src="/logo-transparent.png"
           alt=""
@@ -192,23 +242,39 @@ function FrontCard() {
           className="mx-auto h-16 w-auto object-contain invert"
         />
 
-        <h1 className="font-minimax-display mt-4 w-full text-center text-[clamp(34px,12.4cqw,52px)] leading-[0.95] font-bold tracking-[-0.015em] whitespace-nowrap">
+        <h1 className="font-minimax-display mt-4 text-center text-[clamp(36px,12.1cqw,54px)] leading-[0.95] font-bold tracking-[-0.015em] whitespace-nowrap">
           Manuel Jiménez
         </h1>
 
-        <p className="mt-3 flex items-center justify-center gap-2 text-center text-[16px] font-semibold text-[#c5c9cf]">
+        <p className="mt-2 flex items-center justify-center gap-2 text-center text-[18px] font-bold text-[#e5e7ea]">
           <span>Real Estate Agent</span>
-          <span aria-hidden="true" className="size-1 rounded-full bg-[#c8ff00]" />
+          <span aria-hidden="true" className="size-1.5 rounded-full bg-[#c8ff00]" />
           <span>My Realty Group</span>
         </p>
 
-        <div className="mt-6 rounded-[18px] border border-[#3a4049] bg-[#0a0a0a]">
-          <ContactRow label="Phone" value={contact.phoneDisplay} href={contact.phoneHref} isFirst />
-          <ContactRow label="Email" value={contact.email} href={`mailto:${contact.email}`} />
-          <ContactRow label="Web" value="www.manueljimenezfl.com" href={contact.websiteUrl} />
+        <div className="mx-8 mt-6 rounded-[18px] border border-[#3a4049] bg-[#0a0a0a]">
+          <ContactRow
+            label="Phone"
+            value={contact.phoneDisplay}
+            href={contact.phoneHref}
+            icon={<PhoneGlyph className="size-5" />}
+            isFirst
+          />
+          <ContactRow
+            label="Email"
+            value={contact.email}
+            href={`mailto:${contact.email}`}
+            icon={<MailGlyph className="size-5" />}
+          />
+          <ContactRow
+            label="Web"
+            value="www.manueljimenezfl.com"
+            href={contact.websiteUrl}
+            icon={<GlobeGlyph className="size-5" />}
+          />
         </div>
 
-        <p className="font-minimax-mono mt-auto pt-5 text-center text-[13px] font-medium tracking-[0.18em] text-[#7a808a] uppercase">
+        <p className="font-minimax-mono mt-auto pt-5 text-center text-[18px] font-bold tracking-[0.18em] text-[#9aa0aa] uppercase">
           License {contact.licenseNumber}
         </p>
       </div>
@@ -228,14 +294,14 @@ function BackCard() {
           aria-hidden="true"
           className="mx-auto h-20 w-auto object-contain"
         />
-        <h2 className="font-minimax-display mt-4 text-center text-[clamp(24px,6.4cqw,30px)] leading-[1.15] font-bold tracking-[-0.005em] text-balance">
+        <h2 className="font-minimax-display mt-4 text-center text-[clamp(30px,6.4cqw,30px)] leading-[1.15] font-bold tracking-[-0.005em] text-balance">
           Scan to browse available listings
         </h2>
 
         <a
           href={contact.qrUrl}
           aria-label="Open www.manueljimenezfl.com"
-          className="mx-auto mt-5 grid aspect-square w-[74%] place-items-center rounded-2xl border border-[#e1e3e6] bg-white p-5 transition-colors hover:border-[#9bcc00] focus:ring-2 focus:ring-[#9bcc00] focus:outline-none"
+          className="mx-auto mt-5 grid aspect-square w-[70%] place-items-center rounded-2xl border border-[#e1e3e6] bg-white p-5 transition-colors hover:border-[#9bcc00] focus:ring-2 focus:ring-[#9bcc00] focus:outline-none"
         >
           <QRCodeSVG
             value={contact.qrUrl}
@@ -246,7 +312,7 @@ function BackCard() {
             className="size-full"
           />
         </a>
-        <p className="font-minimax-mono mt-2 text-center text-[13px] font-medium tracking-[0.18em] text-[#7a808a] uppercase">
+        <p className="font-minimax-mono mt-2 text-center text-[16px] font-bold tracking-widest text-[#181e25] uppercase">
           www.manueljimenezfl.com
         </p>
 
@@ -259,8 +325,8 @@ function BackCard() {
         >
           <WhatsAppGlyph className="size-7" />
           <span className="flex flex-col items-start leading-[1.2]">
-            <span className="text-[16px] font-semibold">Contact me</span>
-            <span className="font-minimax-mono text-[13px] font-medium tracking-[0.04em] tabular-nums opacity-75">
+            <span className="text-[18px] font-bold">Contact me</span>
+            <span className="font-minimax-mono text-[18px] font-semibold tracking-[0.04em] tabular-nums opacity-85">
               {contact.phoneDisplay}
             </span>
           </span>
@@ -280,11 +346,13 @@ function BackCard() {
             <InstagramGlyph className="size-7" />
             <FacebookGlyph className="size-7" />
             <YouTubeGlyph className="size-7" />
-            <TikTokGlyph className="size-7" />
+            {/* <TikTokGlyph className="size-7" /> */}
           </span>
           <span className="ml-2 flex flex-col items-start leading-[1.2]">
-            <span className="text-[16px] font-semibold">Follow me</span>
-            <span className="font-minimax-mono text-[13px] font-medium tracking-[0.04em] opacity-70">{contact.handle}</span>
+            <span className="text-[18px] font-bold">Follow me</span>
+            <span className="font-minimax-mono text-[18px] font-semibold tracking-[0.04em] opacity-80">
+              {contact.handle}
+            </span>
           </span>
           <span className="ml-auto transition-transform group-hover:translate-x-0.5">
             <ArrowIcon />
